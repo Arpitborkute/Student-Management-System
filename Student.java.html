@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Student.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Student.java</font>
+</center></td></tr></table>
+<pre>
+    <span class="s1">import </span><span class="s0">java</span><span class="s2">.</span><span class="s0">util</span><span class="s2">.</span><span class="s0">ArrayList</span><span class="s2">;</span>
+
+    <span class="s1">class </span><span class="s0">Student </span><span class="s1">extends </span><span class="s0">Person </span><span class="s2">{</span>
+
+        <span class="s1">int </span><span class="s0">studentId</span><span class="s2">;</span>
+        <span class="s1">int</span><span class="s2">[] </span><span class="s0">grades</span><span class="s2">;</span>
+        <span class="s1">static int </span><span class="s0">totalStudents </span><span class="s2">= </span><span class="s3">0</span><span class="s2">;</span>
+
+        <span class="s1">public </span><span class="s0">Student</span><span class="s2">(</span><span class="s0">String name</span><span class="s2">, </span><span class="s1">int </span><span class="s0">age</span><span class="s2">, </span><span class="s1">int </span><span class="s0">studentId</span><span class="s2">, </span><span class="s1">int</span><span class="s2">[] </span><span class="s0">grades</span><span class="s2">) {</span>
+            <span class="s1">super</span><span class="s2">(</span><span class="s0">age</span><span class="s2">, </span><span class="s0">name</span><span class="s2">);</span>
+            <span class="s1">this</span><span class="s2">.</span><span class="s0">studentId </span><span class="s2">= </span><span class="s0">studentId</span><span class="s2">;</span>
+            <span class="s1">this</span><span class="s2">.</span><span class="s0">grades </span><span class="s2">= </span><span class="s0">grades</span><span class="s2">;</span>
+            <span class="s0">totalStudents</span><span class="s2">++;</span>
+        <span class="s2">}</span>
+
+
+        <span class="s1">public int </span><span class="s0">calculateAverageGrade</span><span class="s2">() {</span>
+            <span class="s1">int </span><span class="s0">sum </span><span class="s2">= </span><span class="s3">0</span><span class="s2">;</span>
+            <span class="s1">for </span><span class="s2">(</span><span class="s1">int </span><span class="s0">grade </span><span class="s2">: </span><span class="s0">grades</span><span class="s2">) {</span>
+                <span class="s0">sum </span><span class="s2">+= </span><span class="s0">grade</span><span class="s2">;</span>
+            <span class="s2">}</span>
+            <span class="s1">return </span><span class="s0">grades</span><span class="s2">.</span><span class="s0">length </span><span class="s2">&gt; </span><span class="s3">0 </span><span class="s2">? (</span><span class="s1">int</span><span class="s2">) </span><span class="s0">sum </span><span class="s2">/ </span><span class="s0">grades</span><span class="s2">.</span><span class="s0">length </span><span class="s2">: </span><span class="s3">0</span><span class="s2">;</span>
+        <span class="s2">}</span>
+
+        <span class="s0">@Override</span>
+        <span class="s0">String getDetails</span><span class="s2">() {</span>
+            <span class="s1">return </span><span class="s4">&quot;Student ID: &quot; </span><span class="s2">+ </span><span class="s0">studentId </span><span class="s2">+ </span><span class="s4">&quot;, Name: &quot; </span><span class="s2">+ </span><span class="s0">name </span><span class="s2">+ </span><span class="s4">&quot;, Age: &quot; </span><span class="s2">+ </span><span class="s0">age</span><span class="s2">;</span>
+        <span class="s2">}</span>
+
+        <span class="s1">public static int </span><span class="s0">getTotalStudents</span><span class="s2">() {</span>
+            <span class="s1">return </span><span class="s0">totalStudents</span><span class="s2">;</span>
+        <span class="s2">}</span>
+
+        <span class="s1">static class </span><span class="s0">Course </span><span class="s2">{</span>
+            <span class="s0">String courseName</span><span class="s2">;</span>
+            <span class="s0">String courseCode</span><span class="s2">;</span>
+
+            <span class="s1">public </span><span class="s0">Course</span><span class="s2">(</span><span class="s0">String courseName</span><span class="s2">, </span><span class="s0">String courseCode</span><span class="s2">) {</span>
+                <span class="s1">this</span><span class="s2">.</span><span class="s0">courseName </span><span class="s2">= </span><span class="s0">courseName</span><span class="s2">;</span>
+                <span class="s1">this</span><span class="s2">.</span><span class="s0">courseCode </span><span class="s2">= </span><span class="s0">courseCode</span><span class="s2">;</span>
+            <span class="s2">}</span>
+
+            <span class="s0">@Override</span>
+            <span class="s1">public </span><span class="s0">String toString</span><span class="s2">() {</span>
+                <span class="s1">return </span><span class="s4">&quot;Course Name: &quot; </span><span class="s2">+ </span><span class="s0">courseName </span><span class="s2">+ </span><span class="s4">&quot;, Code: &quot; </span><span class="s2">+ </span><span class="s0">courseCode</span><span class="s2">;</span>
+
+            <span class="s2">}</span>
+
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+</pre>
+</body>
+</html>

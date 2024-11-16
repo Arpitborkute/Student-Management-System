@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">public class </span><span class="s0">Main </span><span class="s2">{</span>
+    <span class="s1">public static void </span><span class="s0">main</span><span class="s2">(</span><span class="s0">String</span><span class="s2">[] </span><span class="s0">args</span><span class="s2">) {</span>
+        <span class="s0">StudentManagement management </span><span class="s2">= </span><span class="s1">new </span><span class="s0">StudentManagement</span><span class="s2">();</span>
+
+
+        <span class="s0">management</span><span class="s2">.</span><span class="s0">addStudent</span><span class="s2">(</span><span class="s1">new </span><span class="s0">UndergraduateStudent</span><span class="s2">(</span><span class="s3">&quot;Raju&quot;</span><span class="s2">, </span><span class="s4">23</span><span class="s2">, </span><span class="s4">101</span><span class="s2">, </span><span class="s1">new int</span><span class="s2">[]{</span><span class="s4">70</span><span class="s2">, </span><span class="s4">81</span><span class="s2">, </span><span class="s4">89</span><span class="s2">}));</span>
+        <span class="s0">management</span><span class="s2">.</span><span class="s0">addStudent</span><span class="s2">(</span><span class="s1">new </span><span class="s0">GraduateStudent</span><span class="s2">(</span><span class="s3">&quot;Ram&quot;</span><span class="s2">, </span><span class="s4">25</span><span class="s2">, </span><span class="s4">102</span><span class="s2">, </span><span class="s1">new int</span><span class="s2">[]{</span><span class="s4">80</span><span class="s2">, </span><span class="s4">86</span><span class="s2">, </span><span class="s4">95</span><span class="s2">}));</span>
+        <span class="s0">management</span><span class="s2">.</span><span class="s0">addStudent</span><span class="s2">(</span><span class="s1">new </span><span class="s0">UndergraduateStudent</span><span class="s2">(</span><span class="s3">&quot;Vishal&quot;</span><span class="s2">, </span><span class="s4">19</span><span class="s2">, </span><span class="s4">103</span><span class="s2">, </span><span class="s1">new int</span><span class="s2">[]{</span><span class="s4">80</span><span class="s2">, </span><span class="s4">88</span><span class="s2">, </span><span class="s4">89</span><span class="s2">}));</span>
+        <span class="s0">management</span><span class="s2">.</span><span class="s0">addStudent</span><span class="s2">(</span><span class="s1">new </span><span class="s0">GraduateStudent</span><span class="s2">(</span><span class="s3">&quot;Sham&quot; </span><span class="s2">, </span><span class="s4">27</span><span class="s2">, </span><span class="s4">104</span><span class="s2">, </span><span class="s1">new int</span><span class="s2">[]{</span><span class="s4">88</span><span class="s2">,</span><span class="s4">89</span><span class="s2">,</span><span class="s4">96</span><span class="s2">} ));</span>
+        <span class="s0">management</span><span class="s2">.</span><span class="s0">addStudent</span><span class="s2">(</span><span class="s1">new </span><span class="s0">UndergraduateStudent</span><span class="s2">(</span><span class="s3">&quot;Dev&quot; </span><span class="s2">, </span><span class="s4">24</span><span class="s2">, </span><span class="s4">105</span><span class="s2">, </span><span class="s1">new int</span><span class="s2">[]{</span><span class="s4">94</span><span class="s2">,</span><span class="s4">83</span><span class="s2">,</span><span class="s4">85</span><span class="s2">} ));</span>
+        <span class="s0">management</span><span class="s2">.</span><span class="s0">addStudent</span><span class="s2">(</span><span class="s1">new </span><span class="s0">GraduateStudent</span><span class="s2">(</span><span class="s3">&quot;Pintu&quot; </span><span class="s2">, </span><span class="s4">23</span><span class="s2">, </span><span class="s4">106</span><span class="s2">, </span><span class="s1">new int</span><span class="s2">[]{</span><span class="s4">70</span><span class="s2">,</span><span class="s4">85</span><span class="s2">,</span><span class="s4">86</span><span class="s2">} ));</span>
+        <span class="s0">management</span><span class="s2">.</span><span class="s0">addStudent</span><span class="s2">(</span><span class="s1">new </span><span class="s0">UndergraduateStudent</span><span class="s2">(</span><span class="s3">&quot;Jit&quot; </span><span class="s2">, </span><span class="s4">28</span><span class="s2">, </span><span class="s4">107</span><span class="s2">, </span><span class="s1">new int</span><span class="s2">[]{</span><span class="s4">70</span><span class="s2">,</span><span class="s4">76</span><span class="s2">,</span><span class="s4">89</span><span class="s2">} ));</span>
+
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s3">&quot;Scholarship Eligible Students:&quot;</span><span class="s2">);</span>
+        <span class="s0">management</span><span class="s2">.</span><span class="s0">displayScholarshipEligibleStudents</span><span class="s2">();</span>
+
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s3">&quot;All Students:&quot;</span><span class="s2">);</span>
+        <span class="s0">management</span><span class="s2">.</span><span class="s0">displayAllStudents</span><span class="s2">();</span>
+
+
+
+
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s3">&quot;Starting Report Generation:&quot;</span><span class="s2">);</span>
+        <span class="s0">ReportGenerator report </span><span class="s2">= </span><span class="s1">new </span><span class="s0">ReportGenerator</span><span class="s2">(</span><span class="s0">management</span><span class="s2">.</span><span class="s0">students</span><span class="s2">, </span><span class="s0">management</span><span class="s2">.</span><span class="s0">count</span><span class="s2">);</span>
+        <span class="s0">Thread reportThread </span><span class="s2">= </span><span class="s1">new </span><span class="s0">Thread</span><span class="s2">(</span><span class="s0">report</span><span class="s2">);</span>
+        <span class="s0">reportThread</span><span class="s2">.</span><span class="s0">start</span><span class="s2">();</span>
+
+
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s3">&quot;Total Students: &quot; </span><span class="s2">+ </span><span class="s0">Student</span><span class="s2">.</span><span class="s0">getTotalStudents</span><span class="s2">());</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+
+</pre>
+</body>
+</html>
