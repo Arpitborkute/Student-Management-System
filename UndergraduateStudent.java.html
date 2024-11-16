@@ -1,55 +1,34 @@
-<html>
-<head>
-<title>UndergraduateStudent.java</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-.s0 { color: #cf8e6d;}
-.s1 { color: #bcbec4;}
-.s2 { color: #bcbec4;}
-.s3 { color: #2aacb8;}
-.s4 { color: #6aab73;}
-</style>
-</head>
-<body bgcolor="#1e1f22">
-<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
-<tr><td><center>
-<font face="Arial, Helvetica" color="#000000">
-UndergraduateStudent.java</font>
-</center></td></tr></table>
-<pre><span class="s0">public class </span><span class="s1">UndergraduateStudent </span><span class="s0">extends </span><span class="s1">Student </span><span class="s0">implements </span><span class="s1">ScholarshipEligibility </span><span class="s2">{</span>
-    <span class="s0">public </span><span class="s1">UndergraduateStudent</span><span class="s2">(</span><span class="s1">String name</span><span class="s2">, </span><span class="s0">int </span><span class="s1">age</span><span class="s2">, </span><span class="s0">int </span><span class="s1">studentId</span><span class="s2">, </span><span class="s0">int</span><span class="s2">[] </span><span class="s1">grades</span><span class="s2">) {</span>
-        <span class="s0">super</span><span class="s2">(</span><span class="s1">name</span><span class="s2">, </span><span class="s1">age</span><span class="s2">, </span><span class="s1">studentId</span><span class="s2">, </span><span class="s1">grades</span><span class="s2">);</span>
-    <span class="s2">}</span>
+public class UndergraduateStudent extends Student implements ScholarshipEligibility {
+    public UndergraduateStudent(String name, int age, int studentId, int[] grades) {
+        super(name, age, studentId, grades);
+    }
 
-    <span class="s1">@Override</span>
-    <span class="s0">public boolean </span><span class="s1">IsEligibleForScholarship</span><span class="s2">() {</span>
-        <span class="s0">return </span><span class="s1">calculateAverageGrade</span><span class="s2">() &gt; </span><span class="s3">85</span><span class="s2">;</span>
-    <span class="s2">}</span>
+    @Override
+    public boolean IsEligibleForScholarship() {
+        return calculateAverageGrade() > 85;
+    }
 
-    <span class="s1">@Override</span>
-    <span class="s1">String getDetails</span><span class="s2">() {</span>
-        <span class="s0">return super</span><span class="s2">.</span><span class="s1">getDetails</span><span class="s2">() + </span><span class="s4">&quot;, Level:  Is Undergraduate&quot;</span><span class="s2">;</span>
-    <span class="s2">}</span>
+    @Override
+    String getDetails() {
+        return super.getDetails() + ", Level:  Is Undergraduate";
+    }
 
 
-<span class="s2">}</span>
+}
 
- <span class="s0">class </span><span class="s1">GraduateStudent </span><span class="s0">extends </span><span class="s1">Student </span><span class="s0">implements </span><span class="s1">ScholarshipEligibility</span><span class="s2">{</span>
+ class GraduateStudent extends Student implements ScholarshipEligibility{
 
-     <span class="s0">public </span><span class="s1">GraduateStudent</span><span class="s2">(</span><span class="s1">String name</span><span class="s2">, </span><span class="s0">int </span><span class="s1">age</span><span class="s2">, </span><span class="s0">int </span><span class="s1">studentId</span><span class="s2">, </span><span class="s0">int</span><span class="s2">[] </span><span class="s1">grades</span><span class="s2">) {</span>
-         <span class="s0">super</span><span class="s2">(</span><span class="s1">name</span><span class="s2">, </span><span class="s1">age</span><span class="s2">, </span><span class="s1">studentId</span><span class="s2">, </span><span class="s1">grades</span><span class="s2">);</span>
-     <span class="s2">}</span>
+     public GraduateStudent(String name, int age, int studentId, int[] grades) {
+         super(name, age, studentId, grades);
+     }
 
-     <span class="s1">@Override</span>
-     <span class="s0">public boolean </span><span class="s1">IsEligibleForScholarship</span><span class="s2">() {</span>
-         <span class="s0">return </span><span class="s1">calculateAverageGrade</span><span class="s2">() &gt; </span><span class="s3">85</span><span class="s2">;</span>
-     <span class="s2">}</span>
+     @Override
+     public boolean IsEligibleForScholarship() {
+         return calculateAverageGrade() > 85;
+     }
 
-     <span class="s1">@Override</span>
-     <span class="s1">String getDetails</span><span class="s2">() {</span>
-         <span class="s0">return super</span><span class="s2">.</span><span class="s1">getDetails</span><span class="s2">() + </span><span class="s4">&quot;,Level: Is Graduate&quot;</span><span class="s2">;</span>
-     <span class="s2">}</span>
- <span class="s2">}</span>
-</pre>
-</body>
-</html>
+     @Override
+     String getDetails() {
+         return super.getDetails() + ",Level: Is Graduate";
+     }
+ }
